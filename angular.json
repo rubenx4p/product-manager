@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "product-manager"
+    }
+  },
+  "defaultProject": "product-manager",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
