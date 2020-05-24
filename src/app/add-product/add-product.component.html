@@ -1,0 +1,21 @@
+<div class="dialog-container">
+    <h1>{{data.id ? 'Edit ' : 'Add '}}Product</h1>
+    <form class="form">
+        <mat-form-field appearance="legacy" required>
+            <input matInput [formControl]="name" placeholder="Name">
+            <mat-error *ngIf="name.invalid">{{nameErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="legacy">
+            <input matInput type="number" [formControl]="price" placeholder="Price">
+            <mat-error *ngIf="price.invalid">{{priceErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Choose an option</mat-label>
+            <mat-select [(value)]="selectedCategory">
+                <mat-option *ngFor="let c of categories" [value]="c.value">{{c.value}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="save()" [disabled]="hasError()">Save</button>
+    </form>
+</div>

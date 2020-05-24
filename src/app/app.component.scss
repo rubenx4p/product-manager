@@ -1,0 +1,22 @@
+.products-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    .product-actions {
+        display: flex;
+        margin-block-end: 20px;
+        
+        .btn-add-product  {
+            margin-inline-end: 20px;
+        }
+    }
+
+    .mat-table {
+        width: 500px;
+    }
+    .mat-cell, .mat-header-cell {
+        padding-inline-end: 20px;
+      }
+}
+
